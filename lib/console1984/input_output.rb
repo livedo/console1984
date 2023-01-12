@@ -20,13 +20,13 @@ module Console1984::InputOutput
 
       Commands:
 
-      #{COMMANDS.collect { |command, help_line| "* #{ColorizedString.new(command.to_s).light_blue}: #{help_line}" }.join("\n")}
+      #{COMMANDS.collect { |command, help_line| "* #{Rainbow(command.to_s).aqua}: #{help_line}" }.join("\n")}
 
       TXT
     end
 
     def show_warning(message)
-      puts ColorizedString.new("\n#{message}\n").yellow
+      puts Rainbow("\n#{message}\n").yellow
     end
 
     def ask_for_value(message)
